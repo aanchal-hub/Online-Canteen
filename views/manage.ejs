@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Canteen</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <style type="text/css">
+  html{
+  height: 100%;
+  }
+  body{
+  font-family: "lora";
+  font-size: 28px;
+  background-image:url(https://images.unsplash.com/photo-1566843972142-a7fcb70de55a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+  opacity:0.9;
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  height:100%;
+  color: white;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
+  }
+
+  .navbar-default{
+  background-color: #f49f1c;
+  border-radius: 0;
+  color: white;
+  border-color: #00154f;
+
+  }
+  .navbar-default .navbar-nav> li> a{
+  color:white;
+  }
+  .navbar-default .navbar-nav> li> a:hover, .navbar-default .navbar-nav> li> a:focus{
+  background-color: #f2bc94;
+  }
+  #active{
+  background-color: #881916;
+  }
+
+  #main-content{
+    margin-top: 20px;
+  }
+  table{
+  width: 80%;
+  color: ;
+  margin: 0 auto;
+  margin-top: 60px;
+  }
+  tr{
+  border-bottom: 1px solid #f49f1c;
+  }
+  th{
+    font-size: 26px;
+  }
+  td{
+  font-size: 22px;
+  }
+  .add-form{
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+  color: white;
+
+}
+hr{
+  width: 350px;
+  height: 2px;
+  background-color: #f9f7c2;
+}
+
+.btn, .update-btn, .delete-btn{
+  background-color: #f49f1c;
+  font-size: 18px;
+  color: white;
+}
+.btn:hover{
+  background-color: #f2bc94;
+}
+a{
+  text-decoration: none;
+}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/index">Menu</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/data">History</a></li>
+        <li><a href="#">Logout</a></li>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+  <div class="jumbotron" style="margin: 5% 20%; opacity: 0.7; color: #881916; padding: 3%;">
+    <h1 style="opacity: 1; margin-top: 2%; "><%= item.item_name %></h1>
+    <h2 style="opacity: 1;">ID :<%= item.item_id %></h2>
+    <h2 style="opacity: 1;">Cost :<%= item.item_cost %></h2>
+    <h2 style="opacity: 1;">Status :<%= item.item_status %></h2>
+    <button class="btn" style="opacity: 1;"><a href="/index/<%= item._id%>/update"
+     style="text-decoration: none; color: white;">UPDATE</a></button> <br>
+     <form action="/index/<%= item._id %>?_method=DELETE" method="POST">
+      <button class="btn ">DELETE</button>
+    </form>
+  </div>
+
+</body>
+</html>

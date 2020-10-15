@@ -1,0 +1,57 @@
+<%- include('partials/header.ejs') %>
+
+<body style=" background-image:url(https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+			background-size: cover;
+			background-position: center; 
+			opacity:0.93;
+			font-family: "lora";
+			font-size: 22px;
+			text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 
+				 0px 8px 13px rgba(0,0,0,0.1),
+				 0px 18px 23px rgba(0,0,0,0.1);">
+	<div class="container" style="margin-left:100px; margin-top:50px;">
+		<div class="row">
+			<div class="col-lg-4 register-box" style="color:white;
+					width:350px;">
+				<h1 style="text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 
+				 0px 8px 13px rgba(0,0,0,0.1),
+				 0px 18px 23px rgba(0,0,0,0.1);
+				 margin-top:20px;}">
+				 Register</h1>
+				<hr style="height: 2px;
+							background-color: white;">
+				<form>
+			  		
+			  		<div class="form-group">
+			  			<label for="fname">First Name</label>
+			  			<input type="text" class="form-control" name="fname" placeholder="eg: John" required>
+			  		</div>
+			  		<div class="form-group">
+			    		<label for="lname">Last Name</label>
+			    		<input type="text" class="form-control" name="lname" placeholder="eg: Dias" required>
+			  		</div>
+			  		<div class="form-group">
+			    		<label for="username">Username</label>
+			    		<input type="text" class="form-control" name="username" placeholder="eg: SCS01" required>
+			  		</div>
+			  		<div class="form-group">
+			    		<label for="password">Password</label>
+			    		<input type="password" class="form-control" name="password" placeholder="eg: john7dias" required title="Password must be between 8 to 12 characters with at least 1 number">
+			  		</div>
+			  		<button type="submit" class="btn btn-default"
+			  			style="background-color: white;
+								font-size: 18px;">
+							<a href="/register" style="text-decoration:none;
+														color:black;">Register
+							</a>
+					</button>
+					<button type="submit" class="btn btn-default"
+			  		style="background-color: white;
+	font-size: 18px;"><a href="/login" style="text-decoration:none;
+			color:black;">Login</a></button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+<%- include('partials/footer.ejs') %>			
