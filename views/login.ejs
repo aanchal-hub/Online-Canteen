@@ -40,7 +40,7 @@
 				 Login</h1>
 				<hr style=" height: 2px;
 							background-color: white;">
-				<form>
+				<form action="/login" method="POST">
 			  		<div class="form-group">
 			    		<label for="username">Username</label>
 			    		<input type="text" class="form-control" name="username" required>
@@ -51,9 +51,8 @@
 			  		</div>
 			  		<button type="submit" class="btn btn-default"
 			  		style="background-color: white;
-	font-size: 18px;"><a href="/login" style="text-decoration:none;
-			color:black;">Login</a></button>
-					<button type="submit" class="btn btn-default"
+	font-size: 18px;">Login</button>
+					<button class="btn btn-default"
 			  		style="background-color: white;
 	font-size: 18px;"><a href="/register" style="text-decoration:none;
 			color:black;">New? Register here</a></button>

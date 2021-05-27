@@ -4,13 +4,10 @@
   <title>Online Canteen</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <style type="text/css">
-  html{
-  height: 100%;
-  }
-  body{
+    body{
   font-family: "lora";
   font-size: 28px;
-  background-image:url(https://images.unsplash.com/photo-1566843972142-a7fcb70de55a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+  background-image:url(https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   opacity:0.9;
   background-size: cover;
   background-position: center; 
@@ -21,23 +18,15 @@
          0px 8px 13px rgba(0,0,0,0.1),
          0px 18px 23px rgba(0,0,0,0.1);
   }
-  .navbar-default{
-  background-color: #f49f1c;
-  border-radius: 0;
-  color: white;
-  border-color: #00154f;
-
-  }
-  .navbar-default .navbar-nav> li> a{
+  .navbar-fixed-top .navbar-nav> li> a{
   color:white;
   }
-  .navbar-default .navbar-nav> li> a:hover, .navbar-default .navbar-nav> li> a:focus{
+  .navbar-fixed-top .navbar-nav> li> a:hover, .navbar-fixed-top .navbar-nav> li> a:focus{
   background-color: #f2bc94;
   }
   #active{
   background-color: #881916;
   }
-
   #main-content{
     margin-top: 20px;
   }
@@ -46,6 +35,7 @@
   color: white ;
   margin: 0 auto;
   margin-top: 60px;
+  margin-bottom: 30px;
   }
   tr{
   border-bottom: 1px solid #f49f1c;
@@ -59,7 +49,7 @@
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-fixed-top navbar-inverse">
     <div class="container-fluid">
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -69,7 +59,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/data">History</a></li>
-        <li><a href="#">Logout</a></li>
+        <li><a href="/logout">Logout</a></li>
         </li>
       </ul>
     </div>
@@ -80,7 +70,6 @@
     <table>
       <tr>
         <th>Sr.No </th>
-        <th>Item Id</th>
         <th>Item Name</th>
         <th>Item Cost</th>
         <th>Item Status</th>
@@ -89,7 +78,6 @@
       <% item.forEach(function(item){ %>
       <tr>
         <td><%= item.sr_no %></td>
-        <td><%= item.item_id %></td>
         <td><%= item.item_name %></td>
         <td><%= item.item_cost %></td>
         <td><%= item.item_status %></td>
@@ -99,9 +87,8 @@
     </table>    
   </div>
 
-
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script type="text/javascript" src="/script.js"></script>
-
+  <script src="popupS.js"></script>
 </body>
 </html>
